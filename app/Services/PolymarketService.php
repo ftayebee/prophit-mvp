@@ -16,11 +16,6 @@ class PolymarketService
         $this->baseUrl = 'https://clob.polymarket.com';
     }
 
-    /**
-     * Fetch active markets from Polymarket API
-     *
-     * @return array|null
-     */
     public function fetchMarkets(): ?array
     {
         try {

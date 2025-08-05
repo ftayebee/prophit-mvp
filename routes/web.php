@@ -9,6 +9,7 @@ Route::get('/test-polymarket', function (PolymarketService $service) {
     try{
         $markets = $service->fetchMarkets();
         if ($markets) {
+            Log::info('Fetched markets from Polymarket', ['count' => count($markets)]);
             return response()->json([
                 'success' => true,
                 'markets' => $markets,
